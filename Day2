@@ -1,0 +1,86 @@
+#Создать лист из 6 любых чисел. Отсортировать его по возрастанию
+list = [3, 1, 55, 2, 9, 44]
+y = -1
+x = -1
+z = len(list)
+for num_1 in list:
+    if x >= z:
+        break
+    y += 1
+    for num_2 in list:
+        x += 1
+        if x >= z:
+            break
+        if list[y] > list[x]:
+            list[y] = list[x]
+            list[x] = num_1
+            x -= 1
+            break
+           
+#Создать словарь из 5 пар: int -> str, например {6: '6'}, вывести его в консоль попарно
+dict = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five'}
+for key in dict:
+    print(key, dict[key])
+#Создать tuple из 10 любых дробных чисел, найти максимальное и минимальное значение в нем 
+tuple = (2.2, 3.6, 102.4, 95.2, 6.4, 7.3, 8.2, 192.3, 100.2, 99.9)
+x = -1
+max = tuple[x]
+min = tuple[x]
+for a in tuple:
+    if a > tuple[x] and a > max:
+        max = a
+    if a < tuple[x] and a < min:
+        min = a
+    x += 1
+print(max)
+print(min)
+#Создать лист из 3 слов: ['Earth', 'Russia', 'Moscow'], соеденить все слова в единую строку,
+чтобы получилось: 'Earth -> Russia -> Moscow'
+list = ['Earth', 'Russia', 'Moscow']
+total = ''
+for a in list:
+    total += a
+print(total)
+#Взять строку '/bin:/usr/bin:/usr/local/bin' и разбить ее в список по символу ':'
+text = '/bin:/usr/bin:/usr/local/bin'
+list1 = list(text)
+a = list1.count('/')
+b = list1.count(':')
+for x in range(a):
+    list1.remove('/')
+List = str(list1)
+words = List.split(":")
+y = list(words)
+print(y)
+#Пройти по всем числам от 1 до 100, написать в консоль, какие из них делятся на 7, а какие - нет
+for x in range(1, 100):
+    if x % 7 == 0:
+        print(x)
+#Создать матрицу любых чисел 3 на 4, сначала вывести все строки, потом все столбцы
+list = [[1, 7, 8],
+        [2, 6, 9],
+        [3, 2, 1],
+        [8, 5, 4]]
+for y in list:
+    print(y)
+for x in list:
+    print(x[0])
+#Создать список любых объектов, в цикле напечатать в консоль: объект и его индекс
+list = ['azamato', 'arturito', ' mikelanjelo', 'kakotomakoto']
+y = 0
+for x in list:
+    print(x +' ' + str(y))
+    y += 1
+#Создать список любых объектов, в цикле напечатать в консоль: объект и его индекс
+list = ['to-delete', '2', 'three', 'five', 'to-delete', 'to-delete', '7', '4']
+a = list.count('to-delete')
+for x in range(a):
+    list.remove('to-delete')
+print(list)
+#Пройти по всем числам от 1 до 10 в обратную сторону (то есть: от 10 до 1), напечатать их в консоль
+for b in reversed(range(1, 11)):
+    print(b)
+
+
+
+
